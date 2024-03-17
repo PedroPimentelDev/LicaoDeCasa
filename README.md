@@ -1,2 +1,2 @@
-[Texto Alternativo](Main.png)
-[Texto Alternativo](Cadastro.png)
+![Texto Alternativo](Main.png)
+![Texto Alternativo](Cadastro.png)
