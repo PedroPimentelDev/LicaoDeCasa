@@ -1,0 +1,33 @@
+ion-card {
+    box-sizing: border-box; 
+  }
+
+.tab2-content {
+    ion-card:not(.expanded) {
+        height: 6vh; 
+      }
+  }
+
+.expanded {
+    text-align: left;
+    height: 35vh;
+    overflow: hidden; 
+}
+
+#botao{
+    float: left;
+    font-size: 15px;
+}
+
+#botaoB{
+    float: right;
+    font-size: 15px;
+}
+
+#Titulo:not(.expanded) {
+    font-size: 20px;
+    text-align: center;
+  } 
+
+
+

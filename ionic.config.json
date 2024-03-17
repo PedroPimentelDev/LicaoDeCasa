@@ -1,0 +1,9 @@
+{
+  "name": "LiçaoDeCasa",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "9ff40092"
+}

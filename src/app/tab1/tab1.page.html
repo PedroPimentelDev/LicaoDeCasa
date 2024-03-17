@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Lição de Casa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card *ngFor="let licao of licoes">
+    <ion-card-header>
+      <ion-card-title>Matéria: {{licao.Materia}}</ion-card-title>
+      <ion-card-subtitle>Professor: {{licao.Professor}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{licao.Conteudo}}<br><br>
+      Dificuldade: {{licao.Dificuldade}}
+    </ion-card-content>
+
+    <div style="display: flex; align-items: center;">
+      <ion-button fill="clear" id="Botao" (click)="botaoClicado(licao.idLicao)">Concluída</ion-button>
+      <ion-toggle disabled id="toggle"></ion-toggle>
+      <ion-toast trigger="Botao" message="Lição concluída" duration="700"></ion-toast>
+    </div>
+  </ion-card> 
+
+</ion-content>

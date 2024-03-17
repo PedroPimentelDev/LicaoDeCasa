@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cadastro Lição de Casa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="tab2-content">
+
+  <ion-card [ngClass]="{ 'expanded': isExpanded }">
+    
+    <ion-card-header>
+      <ion-card-title id="Titulo" (click)="toggleCard()">Adicionar lição de casa</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="card-content" id="content">
+      <ion-list>
+        <ion-item>
+          <ion-input placeholder="Digite o nome do professor" [(ngModel)]="Professor"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input placeholder="Digite o nome da matéria" [(ngModel)]="Materia"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input placeholder="Digite a lição de casa" [(ngModel)]="Conteudo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-select placeholder="Selecione a dificuldade" [(ngModel)]="Dificuldade">
+            <div slot="label">Dificuldade</div>
+            <ion-select-option value="Fácil">Fácil</ion-select-option>
+            <ion-select-option value="Médio">Médio</ion-select-option>
+            <ion-select-option value="Difícil">Difícil</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+  
+
+  <ion-button fill="clear" (click)="Cancelar()" id="botao">Cancelar</ion-button> 
+  <ion-button fill="clear" (click)="Adicionado()" id="botaoB" [disabled]="!camposPreenchidos()">Confirmar</ion-button>
+  <ion-toast trigger="botao" message="Operação Cancelada" duration="1000"></ion-toast>
+  <ion-toast trigger="botaoB" message="Lição adicionada" duration="1000"></ion-toast>
+</ion-content>
