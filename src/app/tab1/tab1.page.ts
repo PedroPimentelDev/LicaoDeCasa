@@ -10,7 +10,6 @@ export class Tab1Page {
 
   constructor(private databaseService: DatabaseService) {}
 
-  clicado: boolean = false
   isChecked : boolean = false
   licoes: any[] = [];
   
@@ -21,14 +20,13 @@ export class Tab1Page {
   async botaoClicado(id: number){
 
     this.databaseService.updateStatus(1,id)
-    this.clicado = true
-    console.log(this.clicado)
+    this.isChecked = true
+    console.log(this.isChecked)
 
     let botaotoggle = document.getElementById('toggle') as HTMLIonToggleElement;
 
-    if(this.clicado == true){
+    if(this.isChecked){
       botaotoggle.checked = true;
-      this.isChecked = true;
     }
 
     setTimeout(() => {
