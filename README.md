@@ -9,6 +9,14 @@
 - Personalização das lições.
 - Interface moderna e intuitiva.
 
+## Requisitos
+Antes de começar, certifique-se de ter instalado as seguintes ferramentas:
+
+- Node.js (v14 ou superior)
+- NPM (v6 ou superior)
+- Ionic CLI (v6 ou superior)
+- Android Studio (para desenvolvimento Android)
+
 ## Instalação
 1. Clone o repositório:
    ```bash
